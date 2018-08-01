@@ -16,10 +16,27 @@ function getRandomInt(min, max) {
 
 var randomInt = getRandomInt(1, 100);
 /* END STARTING CODE */
+var x = 0
+var guess = parseInt(prompt("what is your guess?"))
+while(guess !== randomInt){
+	if(guess > randomInt){
+		document.write("guess was too high... try again! <br>")
+		x++
+		var guess = parseInt(prompt("what is your guess?"))
+	}
+	else if(guess < randomInt){
+		document.write("guess was too low... try again! <br>")
+		x++
+		var guess = parseInt(prompt("what is your guess?"))
 
-// your code goes under here
+	}
+}
+document.write("congrats... took you long enough, you guessed " + x + " times")
+
+
 
     </script>
+
 </body>
 
 </html>
